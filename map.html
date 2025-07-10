@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>South Africa Map with Animated Tooltips</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .map-container {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .map-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .province-marker {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-color: rgba(255, 127, 80, 0.9);
+      border: 2px solid white;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .province-marker:hover {
+      transform: scale(1.2);
+    }
+
+    .tooltip-text {
+      position: absolute;
+      bottom: 150%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background-color: #333;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 10;
+    }
+
+    .tooltip-text::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 6px;
+      border-style: solid;
+      border-color: #333 transparent transparent transparent;
+    }
+
+    .province-marker:hover .tooltip-text {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Example marker positions - adjust for your map */
+    .marker-western-cape { top: 80%; left: 12%; }
+    .marker-northern-cape { top: 60%; left: 30%; }
+    .marker-limpopo { top: 10%; left: 70%; }
+    .marker-north-west { top: 30%; left: 50%; }
+    .marker-gauteng { top: 30%; left: 70%; }
+    .marker-free-state { top: 40%; left: 65%; }
+    .marker-mpumalanga { top: 30%; left: 80%; }
+    .marker-kwazulu-natal { top: 60%; left: 80%; }
+    .marker-eastern-cape { top: 75%; left: 50%; }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center;">Select a province</h1>
+
+  <div class="map-container">
+    <img src="map.png" alt="Map of South Africa">
+
+    <!-- Circle Markers with Animated Tooltip Bubbles -->
+    <a href="western-cape.html" class="province-marker marker-western-cape">
+      <span class="tooltip-text">Western Cape</span>
+    </a>
+    <a href="northern-cape.html" class="province-marker marker-northern-cape">
+      <span class="tooltip-text">Northern Cape</span>
+    </a>
+
+
+    <a href="gauteng.html" class="province-marker marker-gauteng">
+      <span class="tooltip-text">Gauteng</span>
+    </a>
+    <a href="limpopo.html" class="province-marker marker-limpopo">
+      <span class="tooltip-text">Limpopo</span>
+    </a>
+    <a href="north-west.html" class="province-marker marker-north-west">
+      <span class="tooltip-text">North West</span>
+    </a>
+    <a href="free-state.html" class="province-marker marker-free-state">
+      <span class="tooltip-text">Free State</span>
+    </a>
+
+    <a href="mpumalanga.html" class="province-marker marker-mpumalanga">
+      <span class="tooltip-text">Mpumalanga</span>
+    </a>
+
+    <a href="kwazulu-natal.html" class="province-marker marker-kwazulu-natal">
+      <span class="tooltip-text">KwaZulu-Natal</span>
+    </a>
+
+    <a href="eastern-cape.html" class="province-marker marker-eastern-cape">
+      <span class="tooltip-text">Eastern Cape</span>
+    </a>
+  </div>
+
+</body>
+</html>

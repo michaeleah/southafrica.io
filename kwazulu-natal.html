@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KwaZulu-Natal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+    /*back button */
+    #backButton {
+      margin: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    #backButton:hover {
+      background-color: #0056b3;
+    }
+    /* hero banner */
+    .hero {
+      height: 100vh;
+      background: url('durban/Banner\ Durban.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    /* attractions column */
+    .western-attractions h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 3rem;
+      color: rgba(0, 0, 0, 0.5);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .western-attractions {
+      height: 110vh;
+      background: url('nothern cape/Northern-Cape\ Banner.jpg') no-repeat center center/cover;
+    }
+
+    /* image gallery */
+    div.gallery {
+      border: 1px solid #ccc;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .desc {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 40px;
+      color: white;
+    }
+
+    /* hotel section */
+    .hotels-section {
+      min-height: 100vh;
+      padding: 60px 20px;
+      background-color: #f7f7f7;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .hotels-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .hotel-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hotel-card {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .hotel-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .hotel-card h3 {
+      margin: 15px 0 5px;
+      color: #2c3e50;
+    }
+
+    .hotel-card .location {
+      font-style: italic;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .hotel-card p {
+      padding: 0 15px 20px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    a.card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+<button id="backButton" onclick="goBack()">Map</button>
+
+  <script>
+    function goBack() {
+      // Replace '/previous-page.html' with the actual path you want to go back to
+      window.location.href = 'map.html';
+    }
+  </script>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>KwaZulu-Natal</h1>
+    </div>
+  </section> 
+
+  <section class="hotels-section">
+    <h2>Top Attractions in Durban</h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://ushakamarine.com/" target="_blank">
+        <div class="hotel-card">
+          <img src='durban/uShaka-Marine-World.jpg' alt="Hotel 1">
+          <h3>Ushaka Marine World</h3>
+          <p>A world-class entertainment theme park and tourism destination located on Durban’s Golden Mile. </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.tripadvisor.co.za/Attraction_Review-g312595-d1788512-Reviews-Golden_Mile-Durban_KwaZulu_Natal.html" target="_blank">
+        <div class="hotel-card">
+          <img src='durban/golden mile.webp' alt="Hotel 2">
+          <h3>Golden Mile Durban</h3>
+          <p>Craft stalls, fishing spots & pavement cafes line a boardwalk by a busy beach known for surf breaks.</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://crocodilecreek.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='durban/crocidile park.webp' alt="Hotel 3">
+          <h3>Crocodile Creek</h3>
+          <p>Visit Crocodile Creek on the North Coast near Ballito 
+            and join in a family adventure, get up close to a live
+             crocodile and learn about the fascinating Nile Crocodiles, Alligators and other crocodiles. </p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="clearfix"></div>
+
+  <section class="hotels-section">
+    <h2>Top Hotels in Durban </h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://www.southernsun.com/southern-sun-elangeni-maharani?utm_source=google&utm_medium=businesslisting&utm_campaign=hotel_southern-sun-elangeni-maharani" target="_blank">
+        <div class="hotel-card">
+          <img src='durban/hotel 1.jpg' alt="Hotel 1">
+          <h3>Southern Sun Elangeni & Maharani</h3>
+          <p>At the Southern Sun Elangeni & Maharani we don’t only offer stunning views and exceptional amenities,
+             we also deliver accommodation you can truly escape to with attentive service that makes the difference.
+              Our Durban beachfront accommodation includes an unparalleled choice of rooms.
+            </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.bluewatershotel.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='durban/hotel 2.jpg' alt="Hotel 2">
+          <h3>Blue Waters Hotel</h3>
+          <p>You are assured of a relaxing and memorable stay in one of our 262 newly refurbished guestrooms, most of which have ocean views and outdoor balconies.</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.southernsun.com/garden-court-south-beach" target="_blank">
+        <div class="hotel-card">
+          <img src='durban/hotel 3.jpg' alt="Hotel 3">
+          <h3>Garden Court South Beach</h3>
+          <p>A two-minute walk from the beach, a short drive to the Durban ICC, 
+            and perfectly positioned near family-favourites like Suncoast and
+             uShaka Marine World, Garden Court South Beach is one of the most
+              popular hotels on the Durban beachfront. .</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="hotels-section">
+    <h2>Top Restaurants in Durban</h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://www.tripadvisor.co.za/Restaurant_Review-g312595-d24054090-Reviews-On_Point_Waterfront-Durban_KwaZulu_Natal.html" target="_blank">
+        <div class="hotel-card">
+          <img src='durban/eat 1.webp' alt="restaurant 1">
+          <h3>On Point Waterfront</h3>
+          <p class="location">On Point is Durban’s ultimate lifestyle 
+            destination boasting spectacular harbour views. With a 
+            vibrant mix of quality food vendors, a buzzing bar and'
+             stunning harbour views, it’s the perfect spot to unwind.
+              From live entertainment to a kids’ play area,
+               On Point is where good vibes meet great experiences. </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.circuscircus.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='durban/eat 2.jpg' alt="Hotel 2">
+          <h3>Circus Circus Cafe</h3>
+          <p>A part of the Durban eating culture since 1994,
+             Circus Circus is a restaurant and cafe, offering
+              customers a wide variety of meals: salads, steaks,
+               seafood, pastas and curries to name a few of the
+                choices on the menu. Or if you prefer, pop in for a cortado,
+                 flat white, cappuccino or the like, perfectly brewed by one of our baristas.</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://surfriders.co.za/?fbclid=IwY2xjawLchqJleHRuA2FlbQIxMABicmlkETFTSjUzWWFZQU51Zkh1alRrAR4SyJsF9qb3nX--XDtRInrRr0p8qcdrzugBmk30oRkajOM4Ao3HRRjhNJmsZQ_aem_XAdBba5Vi1veASj9nKPElg" target="_blank">
+        <div class="hotel-card">
+          <img src='durban/eat 3.jpg' alt="Hotel 3">
+          <h3>Surf Riders Food Shack </h3>
+          <p>Surf Riders Café is a part of the Iconic Durban beachfront,
+             with a store situated on the Promenade nearby the Ushaka Marine World,
+              in the South Beach Durban Precinct. Come and experience the Surf Riders 
+              Café vibe and dining experience! “JUST GOOD CHOW!” – our Motto.
+              We are also pet friendly and have a specialty “WOOF” menu.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+<footer style="background-color: #222; color: #eee; padding: 20px; text-align: center; font-size: 14px;">
+  <p>&copy; 2025 Michaeleah Murray . All rights reserved.</p>
+  <p>
+  </p>
+</footer>
+
+
+
+</body>
+</html>

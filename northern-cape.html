@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northern Cape</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+    /*back button */
+    #backButton {
+      margin: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    #backButton:hover {
+      background-color: #0056b3;
+    }
+    /* hero banner */
+    .hero {
+      height: 100vh;
+      background: url('nothern cape/Northern-Cape\ Banner.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    /* attractions column */
+    .western-attractions h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 3rem;
+      color: rgba(0, 0, 0, 0.5);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .western-attractions {
+      height: 110vh;
+      background: url('nothern cape/Northern-Cape\ Banner.jpg') no-repeat center center/cover;
+    }
+
+    /* image gallery */
+    div.gallery {
+      border: 1px solid #ccc;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .desc {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 40px;
+      color: white;
+    }
+
+    /* hotel section */
+    .hotels-section {
+      min-height: 100vh;
+      padding: 60px 20px;
+      background-color: #f7f7f7;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .hotels-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .hotel-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hotel-card {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .hotel-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .hotel-card h3 {
+      margin: 15px 0 5px;
+      color: #2c3e50;
+    }
+
+    .hotel-card .location {
+      font-style: italic;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .hotel-card p {
+      padding: 0 15px 20px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    a.card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+<button id="backButton" onclick="goBack()">Map</button>
+
+  <script>
+    function goBack() {
+      // Replace '/previous-page.html' with the actual path you want to go back to
+      window.location.href = 'map.html';
+    }
+  </script>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Northern Cape</h1>
+    </div>
+  </section> 
+
+  <section class="hotels-section">
+    <h2>Top Attractions in Northern Cape</h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://www.tripadvisor.co.za/Attraction_Review-g312643-d2311139-Reviews-The_Big_Hole-Kimberley_Northern_Cape.html" target="_blank">
+        <div class="hotel-card">
+          <img src='nothern cape/big hole.jpg' alt="Hotel 1">
+          <h3>The Big Hole</h3>
+          <p class="location">Table Mountain</p>
+          <p>During a visit to the Big Hole in Kimberley,
+             South Africa you will not only see the largest man made hole
+              in the world but also the largest diamond display in the world. </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.sanparks.org/parks/mokala" target="_blank">
+        <div class="hotel-card">
+          <img src='nothern cape/mokala.jpg' alt="Hotel 2">
+          <h3>Mokala National Park</h3>
+          <p class="location">Cape Town, South Africa</p>
+          <p>TWhere Endangered Species Roam”… Mokala is SANParks’ newest park.
+             Nestled in the hills, Mokala’s landscape boasts a variety of koppieveld (hills)
+              and large open plains.</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.kimberley.co.za/places/kimberley/free/the-big-hole-kimberley-mine-museum/" target="_blank">
+        <div class="hotel-card">
+          <img src='nothern cape/mine museum.jpg' alt="Hotel 3">
+          <h3>Kimberley Mine Museum</h3>
+          <p class="location">Robben Island</p>
+          <p>Right in the middle of the city, this giant 215-metre deep crater serves
+             as a reminder of the diamond rush of the 1870s, where prospectors carved 
+             out the largest hand-dug excavation in the world in search of the precious
+              gemstones.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="clearfix"></div>
+
+  <section class="hotels-section">
+    <h2>Top Hotels in Northern Cape </h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://www.milnerlodge.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='nothern cape/hotel 1.jpg' alt="Hotel 1">
+          <h3>75 on Milner Lodge</h3>
+          <p class="location">75 Milner Street, Memorial Road Area, KIMBERLEY </p>
+          <p>75 On Milner Lodge is a 4 Star Superior Establishment.
+             It is situated in Kimberley’s Memorial Road Area in South Africa’s Northern Cape Province.
+              Decorated in true luxurious style, 75 on Milner offers a beautiful,
+               relaxing getaway for guests in search of comfort and great service.
+            </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://kimberleyanne.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='nothern cape/hotel 2.jpg' alt="Hotel 2">
+          <h3>Kimberley Anne Hotel</h3>
+          <p class="location">60 Mac Dougall Street, Kimberley, 8301, Northern Cape.</p>
+          <p>The Kimberley Anne experience starts with our 16 luxury rooms where you’ll
+             get the best night’s rest in our crisp linen, and luxury flows through every
+              aspect of your visit here.</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.barneybarnato.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='nothern cape/slider3.jpg' alt="Hotel 3">
+          <h3>Barney Barnato B&B</h3>
+          <p class="location">11 Ortlepp Street Kimberley, 8301 Northern Cape, South Africa</p>
+          <p>Barney Barnato B&B is an upmarket establishment that offers 
+            it’s guest all the pleasures of a home away from home.
+             The B&B is centrally located and is a mere 7-minute drive 
+             from the airport and a 5-minute drive to the center of town</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="hotels-section">
+    <h2>Top Restaurants in Cape Town</h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://www.facebook.com/profile.php?id=100057400451514#" target="_blank">
+        <div class="hotel-card">
+          <img src='nothern cape/restaurant 1.jpg' alt="restaurant 1">
+          <h3>The Fat Greek</h3>
+          <p class="location">Dutoitspan Road, Above The Half Kimberley, Kimberley 8301 South Africa</p>
+          <p>At 𝐓𝐡𝐞 𝐅𝐚𝐭 𝐆𝐫𝐞𝐞𝐤, every bite tells a story – full of passion, tradition, and serious flavour.
+          Whether you're here for the crispy calamari, juicy skewers,
+           or that dessert you definitely saved space for… you're in for a vibe. </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.facebook.com/KarouxRestaurantVictoriaWest/" target="_blank">
+        <div class="hotel-card">
+          <img src='nothern cape/restaurant 2.jpg' alt="Hotel 2">
+          <h3>Ka'roux Restaurant .</h3>
+          <p class="location">C/o R63 and N12, Church Street, Victoria West, South Africa</p>
+          <p>Stylish family friendly restaurant with beautiful garden seating area.
+             Serving traditional Karoo lamb dishes and lots more...</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://kimberleyclubguesthouse.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='nothern cape/restaurant 3.jpg' alt="Hotel 3">
+          <h3>The Kimberley Club</h3>
+          <p class="location">V&A Waterfront</p>
+          <p>For fine dining, the Rhodes Grill offers an exquisite menu of fresh,
+             expertly prepared dishes paired with top South African wines, all served
+              in an elegant colonial setting. After your meal, unwind at our bar with
+               a wide selection of beverages in a sophisticated, inviting ambiance..</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+<footer style="background-color: #222; color: #eee; padding: 20px; text-align: center; font-size: 14px;">
+  <p>&copy; 2025 Michaeleah Murray . All rights reserved.</p>
+  <p>
+  </p>
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limpopo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+    /*back button */
+    #backButton {
+      margin: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    #backButton:hover {
+      background-color: #0056b3;
+    }
+    /* hero banner */
+    .hero {
+      height: 100vh;
+      background: url('north west/banner.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    /* attractions column */
+    .western-attractions h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 3rem;
+      color: rgba(0, 0, 0, 0.5);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .western-attractions {
+      height: 110vh;
+      background: url('nothern cape/Northern-Cape\ Banner.jpg') no-repeat center center/cover;
+    }
+
+    /* image gallery */
+    div.gallery {
+      border: 1px solid #ccc;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .desc {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 40px;
+      color: white;
+    }
+
+    /* hotel section */
+    .hotels-section {
+      min-height: 100vh;
+      padding: 60px 20px;
+      background-color: #f7f7f7;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .hotels-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .hotel-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hotel-card {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .hotel-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .hotel-card h3 {
+      margin: 15px 0 5px;
+      color: #2c3e50;
+    }
+
+    .hotel-card .location {
+      font-style: italic;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .hotel-card p {
+      padding: 0 15px 20px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    a.card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+<button id="backButton" onclick="goBack()">Map</button>
+
+  <script>
+    function goBack() {
+      // Replace '/previous-page.html' with the actual path you want to go back to
+      window.location.href = 'map.html';
+    }
+  </script>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>North West</h1>
+    </div>
+  </section> 
+
+  <section class="hotels-section">
+    <h2>Top Attractions in North West </h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://hartiescableway.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='north west/Aerial Cableway Hartbeespoort.jpg' alt="Hotel 1">
+          <h3>Aerial Cableway Hartbeespoort</h3>
+          <p class="location"></p>
+          <p>A Swiss engineered and installed cableway elevates you to views of the beautiful 
+            Magaliesberg Mountains, Hartbeespoort Dam and surrounding areas, all while enjoying
+             world-class recreational activities. </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.suninternational.com/sun-city/" target="_blank">
+        <div class="hotel-card">
+          <img src='north west/sun city.jpg' alt="Hotel 2">
+          <h3>Sun City</h3>
+          <p class="location"></p>
+          <p>Home to the Valley of Waves and sprawled along the border of the Pilanesberg 
+            National Park, Sun City Resort enjoys the fine distinction of being the only
+             surf-and-safari destination within a two-hour drive of landlocked Johannesburg.</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.facebook.com/p/Little-Paris-Hartebeespoortdam-100064307157297/" target="_blank">
+        <div class="hotel-card">
+          <img src='north west/little paris.jpg' alt="Hotel 3">
+          <h3>Little Paris</h3>
+          <p class="location"></p>
+          <p>Little Paris Harties is in the Heart of Hartbeespoort where you will 
+            find a Little Eiffel Tower. Viewing Only Entry: R50 Free for Restaurant Customers.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="clearfix"></div>
+
+  <section class="hotels-section">
+    <h2>Top Hotels in North West </h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://www.suninternational.com/sun-city/accommodation/" target="_blank">
+        <div class="hotel-card">
+          <img src='north west/sun city resort.webp' alt="Hotel 1">
+          <h3>Sun City Resort</h3>
+          <p>Whether you’re looking for a romantic stay with your partner,
+             a fun weekend getaway with friends or a North West holiday with 
+             the whole family, Sun City Resort has it all.
+            </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.letamonglodge.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='north west/hotel 2.jpg' alt="Hotel 2">
+          <h3>Letamong Lodge</h3>
+          <p>Letamong is based in Kosmos in Hartbeespoort Dam and operates as a holiday destination 
+            of choice for many people who come to Harties for leisure. We also cater for guests who 
+            come for business in the region.</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.thekingdomresort.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='north west/kingdom resort.webp' alt="Hotel 3">
+          <h3>The Kingdom Resort</h3>
+          <p> Wake up to a Pilanesberg sunrise and breathe in a truly unique African 
+            atmosphere when staying at The Kingdom Resort, home to the awe-inspiring 
+            Rare Game Experience, that combines the astonishing beauty of some of the rarest
+             game animals on Earth with an informative and interactive wildlife Experience.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="hotels-section">
+    <h2>Top Restaurants in North West</h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://wanderlog.com/place/details/2801387/the-windmill-restaurant" target="_blank">
+        <div class="hotel-card">
+          <img src='north west/watermill restaurant.jpg' alt="restaurant 1">
+          <h3>The Windmill Restaurant</h3>
+          <p>Nestled in the picturesque Hartbeespoort, The Windmill Restaurant is a delightful family-friendly eatery housed within an iconic Dutch windmill. This charming spot is perfect for any meal of the day, offering a menu that features authentic Dutch cuisine alongside beloved South African dishes.  </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://wanderlog.com/place/details/2801348/die-ou-pastorie" target="_blank">
+        <div class="hotel-card">
+          <img src='north west/restaurant two.jpg' alt="Hotel 2">
+          <h3>Die Ou Pastorie</h3>
+          <p>Nestled on the outskirts of the Cradle of Humankind,
+             Die Ou Pastorie is a charming guesthouse that offers
+              a delightful escape into nature.</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://wanderlog.com/place/details/2801398/die-plaas-se-gat-restaurant" target="_blank">
+        <div class="hotel-card">
+          <img src='north west/restaurant 3.jpg' alt="Hotel 3">
+          <h3>Die Plaas se Gat Restaurant </h3>
+          <p>Die Plaas se Gat Restaurant is a casual, farm-like venue with rustic charm,
+             offering good food and craft beer. It's a great place to chill with friends,
+              enjoy hearty food, and live music on most weekends. The outdoor seating is
+               close to the kiddies play area. The menu includes Boere Kospap, podjiekos, 
+               steak, and more at very reasonable prices.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+<footer style="background-color: #222; color: #eee; padding: 20px; text-align: center; font-size: 14px;">
+  <p>&copy; 2025 Michaeleah Murray . All rights reserved.</p>
+  <p>
+  </p>
+</footer>
+
+
+
+</body>
+</html>

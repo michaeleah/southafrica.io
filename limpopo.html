@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limpopo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+    /*back button */
+    #backButton {
+      margin: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    #backButton:hover {
+      background-color: #0056b3;
+    }
+    /* hero banner */
+    .hero {
+      height: 100vh;
+      background: url('limpopo/limpopo\ banner.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    /* attractions column */
+    .western-attractions h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 3rem;
+      color: rgba(0, 0, 0, 0.5);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .western-attractions {
+      height: 110vh;
+      background: url('nothern cape/Northern-Cape\ Banner.jpg') no-repeat center center/cover;
+    }
+
+    /* image gallery */
+    div.gallery {
+      border: 1px solid #ccc;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .desc {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 40px;
+      color: white;
+    }
+
+    /* hotel section */
+    .hotels-section {
+      min-height: 100vh;
+      padding: 60px 20px;
+      background-color: #f7f7f7;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .hotels-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .hotel-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hotel-card {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .hotel-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .hotel-card h3 {
+      margin: 15px 0 5px;
+      color: #2c3e50;
+    }
+
+    .hotel-card .location {
+      font-style: italic;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .hotel-card p {
+      padding: 0 15px 20px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    a.card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+<button id="backButton" onclick="goBack()">Map</button>
+
+  <script>
+    function goBack() {
+      // Replace '/previous-page.html' with the actual path you want to go back to
+      window.location.href = 'map.html';
+    }
+  </script>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Limpopo</h1>
+    </div>
+  </section> 
+
+  <section class="hotels-section">
+    <h2>Top Attractions in Limpopo</h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://www.sanparks.org/parks/kruger" target="_blank">
+        <div class="hotel-card">
+          <img src='limpopo/kruger park.jpg' alt="Hotel 1">
+          <h3>Kruger National Park</h3>
+          <p class="location"></p>
+          <p>Where nearly 2 million hectares of unrivaled diversity of life forms fuses
+             with historical and archaeological sights – this is real Africa.
+              The world-renowned Kruger National Park offers a wildlife experience
+               that ranks with the best in Africa. </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.foreverwarmbaths.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='limpopo/Warmbaths-Forever-Resort-Bela-Bela-2-940x529.jpg' alt="Hotel 2">
+          <h3>Bela-Bela (Warmbad)</h3>
+          <p class="location"></p>
+          <p>Within easy reach from Johannesburg on the N1, Warmbaths,
+             A Forever Resort is situated in an African Bushveld atmosphere 
+             and will provide you with a unique and unforgettable Holiday Experience. 
+             Families don't have the same needs and expectations when it comes to planning a Holiday,
+              and that is the main reason why Warmbaths, A Forever Resort is the ideal Holiday Destination...</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.sanparks.org/parks/mapungubwe" target="_blank">
+        <div class="hotel-card">
+          <img src='limpopo/Leokwe-Rest-Camp.jpg' alt="Hotel 3">
+          <h3>Mapungubwe National Park</h3>
+          <p class="location"></p>
+          <p>Mapungubwe National Park and World Heritage Site is the ideal location
+             for anyone interested in wildlife and birds, to those in search of serenity,
+              identity and the extraordinary history of this Park…</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="clearfix"></div>
+
+  <section class="hotels-section">
+    <h2>Top Hotels in Limpopo </h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://www.mabalingwe.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='limpopo/hotel 1.png' alt="Hotel 1">
+          <h3>Mabalingwe Nature Reserve</h3>
+          <p class="location">Mabalingwe Nature Reserve R516 Rooiberg Rd Thabazimbi Road, Bela-Bela </p>
+          <p>7Mabalingwe, is located 28 km west of Bela Bela, in the Limpopo province of South Africa,
+             and is about 8 800 hectare in area. It is in an easily accessible, malaria-free area 
+             of the Transvaal bushveld, around an hour-and-a-half drive from Johannesburg.
+              Mabalingwe means "Spots of the leopard.".
+            </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.blyderivercabin.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='limpopo/hotel 2.jpg' alt="Hotel 2">
+          <h3>Blyde River Cabins</h3>
+          <p class="location">Off of the D240 Essex Road, Portion 20 Middlesex Farm, Hoedspruit</p>
+          <p>Blyde River Cabin Guesthouse is an upmarket luxury self-catering (catered on request) 
+            log cabin with an extensive private deck on the banks of the Blyde River (Limpopo Province,
+             South Africa) situated on the fringe of a critically endangered azonal forest type known 
+             as Lowveld Riverine Forest</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://bushriver.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='limpopo/hotel 3.jpg' alt="Hotel 3">
+          <h3>Bushriver Lodge</h3>
+          <p class="location">Oxford Farm, Hoedspruit, 13806</p>
+          <p>Self-catering, owner-operated, 4-star accommodation in luxury chalets
+             on the banks of the Olifants River, close to the Kruger National Park 
+             and a mere 25 km from Hoedspruit.  </p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="hotels-section">
+    <h2>Top Restaurants in Limpopo</h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://saskiarestaurant.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='limpopo/eat 1.jpg' alt="restaurant 1">
+          <h3>Saskia Fine Dining Restaurant</h3>
+          <p class="location"> 1 Hans van Rensburg Street, Polokwane</p>
+          <p>Recline amid modern versions of traditional paintings by Rembrandt
+             while indulging in the Executive chef’s fusions of traditional dishes
+              with a contemporary twist. Every item on our menu is a work of exquisite culinary
+               art and is spectacularly mouth-watering. </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.potnplow.com/" target="_blank">
+        <div class="hotel-card">
+          <img src='limpopo/restaurant 2.webp' alt="Hotel 2">
+          <h3>Pot 'n Plowl</h3>
+          <p class="location">Pot 'n Plow, R71 Haenertsburg Limpopo</p>
+          <p>Join us for a taste of the mountain and delicious Wood-Fired Pizzaa</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://decollage.co.za/ame-ravi-decollage-estate/" target="_blank">
+        <div class="hotel-card">
+          <img src='limpopo/decollage-estate-ame-ravi-upscale-restaurant-moet-moment.jpg' alt="Hotel 3">
+          <h3>Âme Ravi </h3>
+          <p class="location">68 Palmietfontein, Palmietfontein Rd, Polokwane, 0699</p>
+          <p>Âme Ravi is an upscale restaurant situated on the Decollage Estate property.
+             Every element – from its meticulously curated menu, inspired by the flavours
+              of Cape Town and Polokwane, to its handpicked selection of beverages and 
+              talented team – is designed to ensure a truly memorable experience.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+<footer style="background-color: #222; color: #eee; padding: 20px; text-align: center; font-size: 14px;">
+  <p>&copy; 2025 Michaeleah Murray . All rights reserved.</p>
+  <p>
+  </p>
+</footer>
+
+
+
+</body>
+</html>

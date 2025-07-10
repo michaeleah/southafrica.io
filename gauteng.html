@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gauteng</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+    /*back button */
+    #backButton {
+      margin: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    #backButton:hover {
+      background-color: #0056b3;
+    }
+    /* hero banner */
+    .hero {
+      height: 100vh;
+      background: url('gauteng/joburg\ banner.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    /* attractions column */
+    .western-attractions h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 3rem;
+      color: rgba(0, 0, 0, 0.5);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .western-attractions {
+      height: 110vh;
+      background: url('nothern cape/Northern-Cape\ Banner.jpg') no-repeat center center/cover;
+    }
+
+    /* image gallery */
+    div.gallery {
+      border: 1px solid #ccc;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .desc {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 40px;
+      color: white;
+    }
+
+    /* hotel section */
+    .hotels-section {
+      min-height: 100vh;
+      padding: 60px 20px;
+      background-color: #f7f7f7;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .hotels-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .hotel-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hotel-card {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .hotel-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .hotel-card h3 {
+      margin: 15px 0 5px;
+      color: #2c3e50;
+    }
+
+    .hotel-card .location {
+      font-style: italic;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .hotel-card p {
+      padding: 0 15px 20px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    a.card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+<button id="backButton" onclick="goBack()">Map</button>
+
+  <script>
+    function goBack() {
+      // Replace '/previous-page.html' with the actual path you want to go back to
+      window.location.href = 'map.html';
+    }
+  </script>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Gauteng</h1>
+    </div>
+  </section> 
+
+  <section class="hotels-section">
+    <h2>Top Attractions in Gauteng</h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://www.goldreefcity.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='gauteng/gold reef city.jpg' alt="Hotel 1">
+          <h3>Gold Reef City</h3>
+          <p class="location">Corner of Northern Parkway & Data Crescent, Ormonde, Johannesburg, Gauteng, South Africa</p>
+          <p>Take your pick from 16 thrilling rides, 7 Family rides, 21 dedicated kids rides,
+             Jump City Trampoline Park, the only authentic underground mine tour in Johannesburg,
+              12 dining options, multiple Retail stores, plus 15 other attractions all set against 
+              a gold rush era backdrop. </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.sanbi.org/gardens/pretoria/" target="_blank">
+        <div class="hotel-card">
+          <img src='gauteng/garden-pretoria.jpg' alt="Hotel 2">
+          <h3>Pretoria National Garden</h3>
+          <p class="location">2 Cussonia Ave, Brummeria, Pretoria.</p>
+          <p>The South African National Biodiversity Institute (SANBI) contributes
+             to South Africa’s sustainable development by facilitating access to biodiversity data,
+              generating information and knowledge, building capacity, providing policy advice,
+               showcasing and conserving biodiversity in its national botanical and zoological gardens..</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.montecasino.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='gauteng/montecasino.webp' alt="Hotel 3">
+          <h3>Monte Casino</h3>
+          <p class="location">Montecasino Boulevard,
+                Fourways, 2055, South Africa</p>
+          <p>Our award-winning entertainment destination – located in Fourways in northern Johannesburg
+             – boasts international theatre, world-class dining, family fun, class-leading hotels, 
+             casino-thrills, shopping, movies and much more.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="clearfix"></div>
+
+  <section class="hotels-section">
+    <h2>Top Hotels in Gauteng </h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://emeraldcasino.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='nothern cape/hotel 1.jpg' alt="Hotel 1">
+          <h3>Emerald Resort and Casino</h3>
+          <p class="location">75 Milner Street, Memorial Road Area, KIMBERLEY </p>
+          <p>7Emerald Resort & Casino is the only venue in the Vaal area with the facilities
+             and expertise to host busy conferences of up to 3000 delegates as well as intimate,
+              fairytale weddings, parties or other events and celebrations..
+            </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.southernsun.com/garden-court-sandton-city" target="_blank">
+        <div class="hotel-card">
+          <img src='gauteng/garden courts.webp' alt="Hotel 2">
+          <h3>Garden Courts Sandton</h3>
+          <p class="location">Corner of West and Maude Street
+            Sandton, Gauteng,2196</p>
+          <p>Just moments from Sandton’s famous mall, adjacent to Nelson Mandela Square,
+             and a 2-minute walk from the Sandton Convention Centre, the Garden Court Sandton City hotel 
+             combines affordable rates and award-winning service in an ideal city-centre location.</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://anewhotels.com/hotels/centurion/" target="_blank">
+        <div class="hotel-card">
+          <img src='gauteng/pretoria.jpg' alt="Hotel 3">
+          <h3>ANEW Hotel Centurion Pretoria</h3>
+          <p class="location">Cnr Gordon Hood And, Hendrik Verwoerd Dr, Centurion, 0046</p>
+          <p>ANEW Hotel Centurion offers you the perfect base to discover the gateway to Gauteng. With all modern amenities 
+              including a new on-site gym, ANEW Hotel Centurion is in close proximity to several highways,
+               airfields and shopping centers. ANEW Hotel Centurion offers a variety of 7 event and conference
+                venues that can seat up to 220 delegates.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="hotels-section">
+    <h2>Top Restaurants in Gauteng</h2>
+    <div class="hotel-cards">
+
+      <a class="card-link" href="https://www.banchan.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='gauteng/banchan.jpeg' alt="restaurant 1">
+          <h3>Banchan</h3>
+          <p class="location">108 Victoria avenue Parkmore Parkmore, Sandton, Johannesburg Red brick building in the corner</p>
+          <p>We are, a Korean Restaurant located in Parkmore, Sandton (2km away from Sandton City).
+             As a family owned and operated eatery, we serve authentic Korean cuisine 
+             and delicacies with a hand of mom's cooking. </p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://thedailycoffeecafe.co.za/" target="_blank">
+        <div class="hotel-card">
+          <img src='gauteng/locations.webp' alt="Hotel 2">
+          <h3>The daily restaurant .</h3>
+          <p class="location">all around Johannesburg</p>
+          <p>Rooted in the community, The Daily Coffee Café is a vibrant gathering hub and a
+             welcoming retreat for the neighbourhood. Whether meeting up with friends or stealing
+              a quiet moment for yourself, The Daily is your perfect third place – not home,
+               not work, but a warm space to connect, recharge, and stay productive when on the move.</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="https://www.silverstar.co.za/dining/restaurants/calistos/" target="_blank">
+        <div class="hotel-card">
+          <img src='gauteng/calisto.jpg' alt="Hotel 3">
+          <h3>Calisto </h3>
+          <p class="location">Silver Star Casino</p>
+          <p>For over two decades, Calisto’s is a name that has become synonymous with Portuguese food
+             lovers throughout the far reaches of Johannesburg.  The charming, vibrant and electric atmosphere
+              fills this famous Portuguese eatery with a magical character that you simply can’t help falling in
+               love with.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+<footer style="background-color: #222; color: #eee; padding: 20px; text-align: center; font-size: 14px;">
+  <p>&copy; 2025 Michaeleah Murray . All rights reserved.</p>
+  <p>
+  </p>
+</footer>
+
+
+
+</body>
+</html>
